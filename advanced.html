@@ -3,21 +3,59 @@
     <head>
         <title>Advanced HTML Notes</title>
         <meta charset="UTF-8">
+        <style>
+            /* Cascading Style Sheets 
+            1. Selector
+            2. Declaration
+                a. Property
+                b. Value
+            */
+            body{
+                color:paleturquoise;
+                background-color:blue;
+            }
+            h1{
+                color:black;
+                background-color:aqua;
+                text-decoration: underline;
+                text-align: center;
+            }
+            #even{
+                color:brown;
+                
+            }
+            .numbered{
+                font-size: 20px;
+            }
+            .important{
+                font-weight:bold;
+            }
+            .ul{
+                background-color:rgb(70, 68, 68);
+                border-radius: 4px;
+                width: 100px;
+                height: 100px;
+                font-size: 1em;
+            }
+            #image{
+                width:50%
+            }
+        </style>
     </head>
     <body>
-        <h1>Advanced HTML Notes</h1>
-        <h3>Lists:</h3>
+        <h1 class="important">Advanced HTML Notes</h1>
+        <h3 class="important">Lists:</h3>
         <div>
-        <ol type="I">
+        <ol type="I" class="numbered">
             <li>This is the first thing</li>
-            <li>This is the second</li>
+            <li id="even">This is the second</li>
             <li>This is the third</li>
         </ol>
-        <ul>
+        <ul class="ul">
             <li><a href="https://freepngimg.com/png/4557-png-apple-image-clipart-transparent-png-apple" target="_blank"> Apple</a></li>
-            <li>Banana</li>
+            <li id="even">Banana</li>
             <li>Orange</li>
-            <li>Kiwi</li>
+            <li id="even">Kiwi</li>
         </ul>
         <dl>
             <dt>Fall</dt>
@@ -29,8 +67,8 @@
             <dd>New Years</dd>
         </dl>
         </div>
-        <h3>Attributes:</h3>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/1/12/Mount_Timpanogos_-_01-07-08.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original" alt="Mount Timp" width="300">
+        <h3 class="important">Attributes:</h3>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/12/Mount_Timpanogos_-_01-07-08.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original" alt="Mount Timp" id="image">
         <p>Image from <a href="https://commons.wikimedia.org/wiki/File:Mount_Timpanogos_-_01-07-08.jpg" target="_blank"> Wikimedia Commons</a></p>
     </body>
 </html>
