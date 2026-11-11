@@ -7,9 +7,12 @@
             body{
                 background-color: blueviolet;
                 color:yellow;
+                font-family:'Times New Roman', Times, serif;
+                font-size: 2em;
             }
             h1{
-                text-align:center;
+                text-align: center;
+                font-weight: bolder;
             }
             .title{
                 text-decoration: underline;
@@ -17,26 +20,45 @@
             a{
                 color: black;
             }
+            #image{
+                margin: 8px;
+                width: 500px
+            }
+            .source{
+                font-size:medium;
+            }
+            #flex-wrapper{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
         </style>
     </head>
     <body>
         <h1 class="title">Math</h1>
         <h2 class="title">Basic Math:</h2>
         <p>Math is a very important subject to learn. Once you have learned math, you can use it without evan knowing it. Especially with the main basics of math like addition, subtraction, multiplication, and division. But with the more advanced basic math like roots and exponents it would take more experience and memorization to do those quickly in your brain. Once you know how to do these and have the basic equations memorized, you will be able to solve equations in your head quick and quicker if you keep practicing and memorizing more basic equations.</p>
-        <a href="https://images.rawpixel.com/image_png_social_square/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L2pvYjcyOS0wMjYtcC5wbmc.png" target="_blank"> <img src="https://images.rawpixel.com/image_png_social_square/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L2pvYjcyOS0wMjYtcC5wbmc.png" alt="Basic Math Image" width="250"></a>
-        <p>Image from <a href="https://www.rawpixel.com/search/math%20symbols?page=1&path=1522&sort=curated" target="_blank"> Rawpixel</a></p>
+        <div id="flex-wrapper">
+            <a href="https://images.rawpixel.com/image_png_social_square/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L2pvYjcyOS0wMjYtcC5wbmc.png" target="_blank"> <img id="image" src="https://images.rawpixel.com/image_png_social_square/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L2pvYjcyOS0wMjYtcC5wbmc.png" alt="Basic Math Image"></a>
+            <p class="source">Image from <a href="https://www.rawpixel.com/search/math%20symbols?page=1&path=1522&sort=curated" target="_blank"> Rawpixel</a></p>
+        </div>
         <h2 class="title">Order of operations:</h2>
         <p>The order of operation is important to know in math too, if you didn't do in the right order it couldn't always be right. For remembering the order of operation with math you need to know PEMDAS. PEMDAS is the order your supposed to do math, it stand for Parentheses, Exponents, Multiplication, Division, Addition, and Subtraction. Once you have that then you need to remember that multiplication and division are in the same line of order, meaning you can do either or first and it won't matter, addition and subtraction have the same line of order too. But don't think multiplication and addition are in the same line of order because it will matter if you do addition first, before multiplication. Also when only one line of order in the equation then you do it like reading, you do the math from left to right.</p>
-        <h3 class="title">PEMDAS:</h3>
-        <ol>
-            <li>Parentheses</li>
-            <li>Exponents</li>
-            <li>Multiply</li>
-            <li>Divide</li>
-            <li>Add</li>
-            <li>Subtract</li>
-        </ol>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYjyp-moJBxJhXPcufB4dH--8wiGw1s_HQ1eKAw4bdNV1umzT0-zskDoXR&s=10" alt="Order of Operations" width="250"></a>
-        <p>Image from Flickr</p>
+        <div id="flex-wrapper">
+            <h3 class="title">PEMDAS:</h3>
+            <ol>
+                <li>Parentheses</li>
+                <li>Exponents</li>
+                <li>Multiply</li>
+                <li>Divide</li>
+                <li>Add</li>
+                <li>Subtract</li>
+            </ol>
+            <img id="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYjyp-moJBxJhXPcufB4dH--8wiGw1s_HQ1eKAw4bdNV1umzT0-zskDoXR&s=10" alt="Order of Operations"></a>
+        <p class="source">Image from Flickr</p>
+        </div>
     </body>
 </html>
