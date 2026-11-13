@@ -29,10 +29,14 @@
                 justify-content: space-between;
                 flex-wrap: wrap;
             }
+            #bird{
+                width: 150px;
+            }
         </style>
     </head>
     <body>
         <h1>Alignmet Notes</h1>
+        <img src="https://img.magnific.com/free-photo/closeup-scarlet-macaw-from-side-view-scarlet-macaw-closeup-head_488145-3540.jpg?semt=ais_hybrid&w=740&q=80" alt="bird" id="bird" onmouseout="changeImage()">
         <div id="boxes">
             <div id="box-wrapper">
                 <div id="box" onmouseover="dissapear()" onmouseout="appear()">
@@ -69,6 +73,15 @@
         <button onClick="show()" id="showmore">Show More</button>
         <script>
             //makes the webpage interactive
+            let images = ["https://static.vecteezy.com/vite/assets/photo-masthead-375-BoK_p8LG.webp", "https://i0.wp.com/picjumbo.com/wp-content/uploads/detailed-shot-of-ripples-at-sunset-free-image.jpeg?w=600&quality=80", "https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-fall-nature-scenery-free-image.jpeg?w=600&quality=80", "https://img.magnific.com/free-photo/closeup-scarlet-macaw-from-side-view-scarlet-macaw-closeup-head_488145-3540.jpg?semt=ais_hybrid&w=740&q=80"]
+            let current = 0
+            function changeImage(){
+                current += 1
+                if (current > 3){
+                    current = 0
+                }
+                document.getElementById("bird").src = images[current]
+            }
             function color(){
                 let newColor = document.getElementById("colorPicker").value
                 document.getElementById("box").style.backgroundColor=newColor
