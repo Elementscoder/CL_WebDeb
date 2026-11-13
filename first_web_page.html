@@ -20,7 +20,7 @@
             a{
                 color: black;
             }
-            #image{
+            .image{
                 padding: 16px;
                 margin: 8px;
                 width: 500px
@@ -43,8 +43,11 @@
         <h2 class="title">Basic Math:</h2>
         <p>Math is a very important subject to learn. Once you have learned math, you can use it without evan knowing it. Especially with the main basics of math like addition, subtraction, multiplication, and division. But with the more advanced basic math like roots and exponents it would take more experience and memorization to do those quickly in your brain. Once you know how to do these and have the basic equations memorized, you will be able to solve equations in your head quick and quicker if you keep practicing and memorizing more basic equations.</p>
         <div id="flex-wrapper">
-            <a href="https://images.rawpixel.com/image_png_social_square/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L2pvYjcyOS0wMjYtcC5wbmc.png" target="_blank"> <img id="image" src="https://images.rawpixel.com/image_png_social_square/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L2pvYjcyOS0wMjYtcC5wbmc.png" alt="Basic Math Image"></a>
-            <p class="source">Image from <a href="https://www.rawpixel.com/search/math%20symbols?page=1&path=1522&sort=curated" target="_blank"> Rawpixel</a></p>
+            <a href="https://images.rawpixel.com/image_png_social_square/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L2pvYjcyOS0wMjYtcC5wbmc.png" target="_blank"> <img id="math" class="image" src="https://images.rawpixel.com/image_png_social_square/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L2pvYjcyOS0wMjYtcC5wbmc.png" alt="Basic Math Image" onmouseenter="changeImage()"></a>
+            <div>
+                <p class="source">First image from <a href="https://www.rawpixel.com/search/math%20symbols?page=1&path=1522&sort=curated" target="_blank"> Rawpixel</a></p>
+                <p class="source">Second image from Flickr</p>
+            </div>
         </div>
         <h2 class="title">Order of operations:</h2>
         <p>The order of operation is important to know in math too, if you didn't do in the right order it couldn't always be right. For remembering the order of operation with math you need to know PEMDAS. PEMDAS is the order your supposed to do math, it stand for Parentheses, Exponents, Multiplication, Division, Addition, and Subtraction. Once you have that then you need to remember that multiplication and division are in the same line of order, meaning you can do either or first and it won't matter, addition and subtraction have the same line of order too. But don't think multiplication and addition are in the same line of order because it will matter if you do addition first, before multiplication. Also when only one line of order in the equation then you do it like reading, you do the math from left to right.</p>
@@ -60,8 +63,32 @@
                     <li>Subtract</li>
                 </ol>
             </div>
-            <img id="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYjyp-moJBxJhXPcufB4dH--8wiGw1s_HQ1eKAw4bdNV1umzT0-zskDoXR&s=10" alt="Order of Operations"></a>
+            <img class="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYjyp-moJBxJhXPcufB4dH--8wiGw1s_HQ1eKAw4bdNV1umzT0-zskDoXR&s=10" alt="Order of Operations"></a>
         <p class="source">Image from Flickr</p>
         </div>
+        <h2 class="title">Exponents and Roots</h2>
+        <p>Exponents and roots are more harder part of math than subtraction, addition, divition, and multiplication. Like how multiplication is just addition over and over again, just shorter.</p>
+        <button onClick="show()" id="showmore">Show More</button>
+        <script>
+            let images = ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGsnOwX4GlUOjK4uwEGKQ7xWqM2wX0G76hEZt-nddRqJAIywElAdwX8Q0&s=10", "https://images.rawpixel.com/image_png_social_square/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L2pvYjcyOS0wMjYtcC5wbmc.png"]
+            let current = 0
+            function changeImage(){
+                current += 1
+                if (current > 1){
+                    current = 0
+                }
+                document.getElementById("math").src = images[current]
+            }
+            function show(){
+                let element=document.getElementById("flex-wrapper")
+                if (element.style.display=="flex"){
+                    element.style.display="none"
+                    document.getElementById("showmore").innerHTML="Show More"
+                }else{
+                    element.style.display="flex"
+                    document.getElementById("showmore").innerHTML="Show less"
+                }
+            }
+        </script>
     </body>
 </html>
