@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Saint George</title>
+        <meta charset="UTF-8">
+        <style>
+            body{
+                background-color: coral;
+                color: aquamarine;
+                font-family:'Times New Roman', Times, serif;
+                font-size: 2em;
+            }
+            h1{
+                text-align: center;
+                font-weight: bolder;
+                font-family: cursive;
+            }
+            .title{
+                text-decoration: underline;
+            }
+            a{
+                color: blue;
+            }
+            .image{
+                padding: 16px;
+                margin: 8px;
+                width: 500px
+            }
+            .source{
+                font-size:medium;
+            }
+            #flex-wrapper{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                justify-content:space-evenly;
+                flex-wrap: wrap;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 class="title">Saint George</h1>
+        <h2 class="title">About Saint George:</h2>
+        <p>Saint George is a fun place to come to Utah for a least once. In Saint George you can live the condo life and hopefully live by a pool that you can go into anytime for free if you have a membership card for the pool. You could also go golfing near by the condos and have fun with your family and/or friends.</p>
+        <div id="flex-wrapper">
+            <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnxMo07WimX6kD1rVhRrwqNqQI5wxyVoP_ZUjyUNfM8g&s" target="_blank"> <img id="saintGeorge" class="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnxMo07WimX6kD1rVhRrwqNqQI5wxyVoP_ZUjyUNfM8g&s" alt="Pool" onmouseenter="changeImage()"></a>
+            <div>
+                <p class="source">First image from <a href="https://www.rawpixel.com/search/math%20symbols?page=1&path=1522&sort=curated" target="_blank"> Rawpixel</a></p>
+                <p class="source">Second image from Flickr</p>
+            </div>
+        </div>
+        <h2 class="title">Order of operations:</h2>
+        <p>The order of operation is important to know in math too, if you didn't do in the right order it couldn't always be right. For remembering the order of operation with math you need to know PEMDAS. PEMDAS is the order your supposed to do math, it stand for Parentheses, Exponents, Multiplication, Division, Addition, and Subtraction. Once you have that then you need to remember that multiplication and division are in the same line of order, meaning you can do either or first and it won't matter, addition and subtraction have the same line of order too. But don't think multiplication and addition are in the same line of order because it will matter if you do addition first, before multiplication. Also when only one line of order in the equation then you do it like reading, you do the math from left to right.</p>
+        <div id="flex-wrapper">
+            <div>
+                <h3 class="title">PEMDAS:</h3>
+                <ol>
+                    <li>Parentheses</li>
+                    <li>Exponents</li>
+                    <li>Multiply</li>
+                    <li>Divide</li>
+                    <li>Add</li>
+                    <li>Subtract</li>
+                </ol>
+            </div>
+            <img class="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYjyp-moJBxJhXPcufB4dH--8wiGw1s_HQ1eKAw4bdNV1umzT0-zskDoXR&s=10" alt="Order of Operations"></a>
+        <p class="source">Image from Flickr</p>
+        </div>
+        <h2 class="title">Exponents and Roots</h2>
+        <p>Exponents and roots are more harder part of math than subtraction, addition, divition, and multiplication. Like how multiplication is just addition over and over again, just shorter.</p>
+        <button onClick="show()" id="showmore">Show More</button>
+        <script>
+            let images = ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGsnOwX4GlUOjK4uwEGKQ7xWqM2wX0G76hEZt-nddRqJAIywElAdwX8Q0&s=10", "https://images.rawpixel.com/image_png_social_square/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L2pvYjcyOS0wMjYtcC5wbmc.png"]
+            let current = 0
+            function changeImage(){
+                current += 1
+                if (current > 1){
+                    current = 0
+                }
+                document.getElementById("math").src = images[current]
+            }
+            function show(){
+                let element=document.getElementById("flex-wrapper")
+                if (element.style.display=="flex"){
+                    element.style.display="none"
+                    document.getElementById("showmore").innerHTML="Show More"
+                }else{
+                    element.style.display="flex"
+                    document.getElementById("showmore").innerHTML="Show less"
+                }
+            }
+        </script>
+    </body>
+</html>
