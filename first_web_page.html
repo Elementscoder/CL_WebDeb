@@ -10,6 +10,14 @@
                 font-family:'Times New Roman', Times, serif;
                 font-size: 2em;
             }
+            button{
+                margin: 8px;
+                padding: 10px;
+                background-color: yellow;
+                color: black;
+                font-size: large;
+                font-weight: 500;
+            }
             h1{
                 text-align: center;
                 font-weight: bolder;
@@ -36,6 +44,9 @@
                 justify-content:space-evenly;
                 flex-wrap: wrap;
             }
+            #hidden{
+                display: none;
+            }
         </style>
     </head>
     <body>
@@ -43,8 +54,8 @@
         <h2 class="title">Basic Math:</h2>
         <p>Math is a very important subject to learn. Once you have learned math, you can use it without evan knowing it. Especially with the main basics of math like addition, subtraction, multiplication, and division. But with the more advanced basic math like roots and exponents it would take more experience and memorization to do those quickly in your brain. Once you know how to do these and have the basic equations memorized, you will be able to solve equations in your head quick and quicker if you keep practicing and memorizing more basic equations.</p>
         <div id="flex-wrapper">
-            <a href="https://images.rawpixel.com/image_png_social_square/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L2pvYjcyOS0wMjYtcC5wbmc.png" target="_blank"> <img id="math" class="image" src="https://images.rawpixel.com/image_png_social_square/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L2pvYjcyOS0wMjYtcC5wbmc.png" alt="Basic Math Image" onmouseenter="changeImage()"></a>
             <div>
+                <a href="https://images.rawpixel.com/image_png_social_square/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L2pvYjcyOS0wMjYtcC5wbmc.png" target="_blank"> <img id="math" class="image" src="https://images.rawpixel.com/image_png_social_square/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L2pvYjcyOS0wMjYtcC5wbmc.png" alt="Basic Math Image" onmouseover="changeImage()"></a>
                 <p class="source">First image from <a href="https://www.rawpixel.com/search/math%20symbols?page=1&path=1522&sort=curated" target="_blank"> Rawpixel</a></p>
                 <p class="source">Second image from Flickr</p>
             </div>
@@ -63,11 +74,17 @@
                     <li>Subtract</li>
                 </ol>
             </div>
-            <img class="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYjyp-moJBxJhXPcufB4dH--8wiGw1s_HQ1eKAw4bdNV1umzT0-zskDoXR&s=10" alt="Order of Operations"></a>
-        <p class="source">Image from Flickr</p>
+            <div>
+                <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYjyp-moJBxJhXPcufB4dH--8wiGw1s_HQ1eKAw4bdNV1umzT0-zskDoXR&s=10" target="_blank"> <img class="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYjyp-moJBxJhXPcufB4dH--8wiGw1s_HQ1eKAw4bdNV1umzT0-zskDoXR&s=10" alt="Order of Operations"></a>
+                <p class="source">Image from Flickr</p>
+            </div>
         </div>
-        <h2 class="title">Exponents and Roots</h2>
-        <p>Exponents and roots are more harder part of math than subtraction, addition, divition, and multiplication. Like how multiplication is just addition over and over again, just shorter.</p>
+        <div id="hidden">
+            <h2 class="title">Exponents and Roots</h2>
+            <p>Exponents and roots are more harder part of math than subtraction, addition, divition, and multiplication. Exponents are Like how multiplication is just repeated addition, just shorter. They are like it because exponents are repeated multiplication, so it is repeated, repeated addition, making sense of why they added multiplication and exponents. Roots are also simular to division, in a that they do the opposite of exponents. Also, like division is repeated subtraction, roots are repeated division, which means roots are repeated, repeated subtraction.</p>
+            <img class="image" id="exponents" src="https://yeeqtrevjmgjepxchuhw.supabase.co/storage/v1/object/public/generated-images/library-square_number_01-watermarked.png" alt="Exponents" onmouseover="imageSwitch()">
+            <p class="source">Images from <a href="https://www.kuraplan.com/free-images/square_number_01--f037142f-c679-478d-a8d8-640fa098b5ef" target="_blank">Kuraplan</a></p>
+        </div>
         <button onClick="show()" id="showmore">Show More</button>
         <script>
             let images = ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGsnOwX4GlUOjK4uwEGKQ7xWqM2wX0G76hEZt-nddRqJAIywElAdwX8Q0&s=10", "https://images.rawpixel.com/image_png_social_square/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L2pvYjcyOS0wMjYtcC5wbmc.png"]
@@ -80,14 +97,23 @@
                 document.getElementById("math").src = images[current]
             }
             function show(){
-                let element=document.getElementById("flex-wrapper")
-                if (element.style.display=="flex"){
+                let element=document.getElementById("hidden")
+                if (element.style.display=="block"){
                     element.style.display="none"
                     document.getElementById("showmore").innerHTML="Show More"
                 }else{
-                    element.style.display="flex"
+                    element.style.display="block"
                     document.getElementById("showmore").innerHTML="Show less"
                 }
+            }
+            let examples = ["https://yeeqtrevjmgjepxchuhw.supabase.co/storage/v1/object/public/generated-images/library-square_number_02-watermarked.png", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlsPkjFJlC0I6KwYlmIMso5mVy-wIk0yxsQfdCOkyXnNcKNWtUAAqutqI&s=10", "https://yeeqtrevjmgjepxchuhw.supabase.co/storage/v1/object/public/generated-images/library-square_number_12-watermarked.png", "https://yeeqtrevjmgjepxchuhw.supabase.co/storage/v1/object/public/generated-images/library-square_number_01-watermarked.png"]
+            let picture = 0
+            function imageSwitch(){
+                picture += 1
+                if (picture > 3){
+                    picture = 0
+                }
+                document.getElementById("exponents").src = examples[picture]
             }
         </script>
     </body>
