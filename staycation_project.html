@@ -31,54 +31,45 @@
             }
             #flex-wrapper{
                 display: flex;
-                flex-direction: row;
-                justify-content: center;
-                align-items: center;
-                justify-content:space-evenly;
-                flex-wrap: wrap;
             }
         </style>
     </head>
     <body>
         <h1 class="title">Saint George</h1>
         <h2 class="title">About Saint George:</h2>
-        <p>Saint George is a fun place to come to Utah for a least once. In Saint George you can live the condo life and hopefully live by a pool that you can go into anytime for free if you have a membership card for the pool. You could also go golfing near by the condos and have fun with your family and/or friends.</p>
         <div id="flex-wrapper">
-            <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnxMo07WimX6kD1rVhRrwqNqQI5wxyVoP_ZUjyUNfM8g&s" target="_blank"> <img id="saintGeorge" class="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnxMo07WimX6kD1rVhRrwqNqQI5wxyVoP_ZUjyUNfM8g&s" alt="Pool" onmouseenter="changeImage()"></a>
+            <p>Saint George is a fun place to come to Utah for a least once. In Saint George you can live the condo life and hopefully live by a pool that you can go into anytime for free if you have a membership card for the pool. You could also go golfing near by the condos and have fun with your family and/or friends.</p>
             <div>
-                <p class="source">First image from <a href="https://www.rawpixel.com/search/math%20symbols?page=1&path=1522&sort=curated" target="_blank"> Rawpixel</a></p>
-                <p class="source">Second image from Flickr</p>
+                <img id="saintGeorge" class="image" src="https://upload.wikimedia.org/wikipedia/commons/1/1d/St_george%27s_park_July_2012_Hydrotherapy_Suite.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original" alt="Pool" onmouseover="changeImage()"></a>
+                <p class="source">Images from <a href="https://commons.wikimedia.org/wiki/File:St.Andrews_Old_Course,_5th_Hole,_Hole_O%27Cross_out_%28geograph_5515132%29.jpg" target="_blank"> Wikimdeia Commons</a></p>
             </div>
         </div>
-        <h2 class="title">Order of operations:</h2>
-        <p>The order of operation is important to know in math too, if you didn't do in the right order it couldn't always be right. For remembering the order of operation with math you need to know PEMDAS. PEMDAS is the order your supposed to do math, it stand for Parentheses, Exponents, Multiplication, Division, Addition, and Subtraction. Once you have that then you need to remember that multiplication and division are in the same line of order, meaning you can do either or first and it won't matter, addition and subtraction have the same line of order too. But don't think multiplication and addition are in the same line of order because it will matter if you do addition first, before multiplication. Also when only one line of order in the equation then you do it like reading, you do the math from left to right.</p>
         <div id="flex-wrapper">
             <div>
-                <h3 class="title">PEMDAS:</h3>
+                <h3 class="title">Four reasons you should go:</h3>
                 <ol>
-                    <li>Parentheses</li>
-                    <li>Exponents</li>
-                    <li>Multiply</li>
-                    <li>Divide</li>
-                    <li>Add</li>
-                    <li>Subtract</li>
+                    <li>Fun family and friend time.</li>
+                    <li>You can swim in pools anytime.</li>
+                    <li>You can golf near the place your staying.</li>
+                    <li>Get to live the condo life.</li>
                 </ol>
             </div>
-            <img class="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYjyp-moJBxJhXPcufB4dH--8wiGw1s_HQ1eKAw4bdNV1umzT0-zskDoXR&s=10" alt="Order of Operations"></a>
-        <p class="source">Image from Flickr</p>
+                <div><img class="image" src="https://legacy.freerangestock.com/sample/162837/Direct_Media____TTRSQXJ2D5.jpg">
+                <p class="source">Image from <a href="https://freerangestock.com/photo/163283/family-laughter-and-playtime-on-bed" target="_blank"> Freerange Stock</p>
+            </div>
         </div>
         <h2 class="title">Exponents and Roots</h2>
         <p>Exponents and roots are more harder part of math than subtraction, addition, divition, and multiplication. Like how multiplication is just addition over and over again, just shorter.</p>
         <button onClick="show()" id="showmore">Show More</button>
         <script>
-            let images = ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGsnOwX4GlUOjK4uwEGKQ7xWqM2wX0G76hEZt-nddRqJAIywElAdwX8Q0&s=10", "https://images.rawpixel.com/image_png_social_square/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L2pvYjcyOS0wMjYtcC5wbmc.png"]
+            let images = ["https://upload.wikimedia.org/wikipedia/commons/5/5b/St.Andrews_Old_Course%2C_5th_Hole%2C_Hole_O%27Cross_out_%28geograph_5515132%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original", "https://upload.wikimedia.org/wikipedia/commons/1/1d/St_george%27s_park_July_2012_Hydrotherapy_Suite.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"]
             let current = 0
             function changeImage(){
                 current += 1
                 if (current > 1){
                     current = 0
                 }
-                document.getElementById("math").src = images[current]
+                document.getElementById("saintGeorge").src = images[current]
             }
             function show(){
                 let element=document.getElementById("flex-wrapper")
