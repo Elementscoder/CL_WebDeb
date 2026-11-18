@@ -8,7 +8,13 @@
                 background-color: coral;
                 color: aquamarine;
                 font-family:'Times New Roman', Times, serif;
-                font-size: 2em;
+                font-size: 4em;
+            }
+            button{
+                margin: 20px;
+                padding: 10px;
+                background-color:white;
+                font-weight: bold;
             }
             h1{
                 text-align: center;
@@ -24,23 +30,34 @@
             .image{
                 padding: 16px;
                 margin: 8px;
+                width: 750px
+            }
+            .pool{
+                padding: 16px;
+                margin: 8px;
                 width: 500px
             }
             .source{
                 font-size:medium;
+                padding-left: 30px;
             }
             #flex-wrapper{
                 display: flex;
+                justify-content: space-evenly;
+                padding: 20px;
+            }
+            #hidden{
+                display: none;
             }
         </style>
     </head>
     <body>
-        <h1 class="title">Saint George</h1>
-        <h2 class="title">About Saint George:</h2>
+        <h1 class="title">St. George</h1>
+        <h2 class="title">About St. George:</h2>
         <div id="flex-wrapper">
-            <p>Saint George is a fun place to come to Utah for a least once. In Saint George you can live the condo life and hopefully live by a pool that you can go into anytime for free if you have a membership card for the pool. You could also go golfing near by the condos and have fun with your family and/or friends.</p>
+            <p>St. George is a fun place to come to Utah for a least once. In St. George you can live the condo life and hopefully live by a pool that you can go into anytime for free if you have a membership card for the pool. You could also go golfing near by the condos and have fun with your family and/or friends.</p>
             <div>
-                <img id="saintGeorge" class="image" src="https://upload.wikimedia.org/wikipedia/commons/1/1d/St_george%27s_park_July_2012_Hydrotherapy_Suite.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original" alt="Pool" onmouseover="changeImage()"></a>
+                <img id="st.George" class="pool" src="https://upload.wikimedia.org/wikipedia/commons/1/1d/St_george%27s_park_July_2012_Hydrotherapy_Suite.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original" alt="Pool" onmouseover="changeImage()"></a>
                 <p class="source">Images from <a href="https://commons.wikimedia.org/wiki/File:St.Andrews_Old_Course,_5th_Hole,_Hole_O%27Cross_out_%28geograph_5515132%29.jpg" target="_blank"> Wikimdeia Commons</a></p>
             </div>
         </div>
@@ -58,9 +75,15 @@
                 <p class="source">Image from <a href="https://freerangestock.com/photo/163283/family-laughter-and-playtime-on-bed" target="_blank"> Freerange Stock</a></p>
             </div>
         </div>
-        <h2 class="title">Exponents and Roots</h2>
-        <p>Exponents and roots are more harder part of math than subtraction, addition, divition, and multiplication. Like how multiplication is just addition over and over again, just shorter.</p>
-        <button onClick="show()" id="showmore">Show More</button>
+        <div id="hidden">
+            <div>
+                <h2 class="title">Personal Experience:</h2>
+                <p>For me going to St. George was my only vacation every other year, so it was pretty fun for me. Also it was cool because I had never had experienced having a cable telivision, for me that was a fun experience, but it got kind of boring as the years passed. When I went there with my family, we usually go swimming and have fun at the pool most of the day. We also got to have more family time than at home and got to play more board games together, which is always a fun time, since we barely do it. A fun thing we also do is play pool, which is fun for me to get experience with it and get better at playing it.</p>
+                <a href="https://snappygoat.com/b/f7c82453a0419d489f110b09985812d162f03408" target="_blank"> <img class="image" src="https://snappygoat.com/b/f7c82453a0419d489f110b09985812d162f03408"></a>
+                <p class="source">Image from <a href="https://snappygoat.com/s/?q=bestof%3Abilliards+pool+table+rack+balls+cue+stick+sport+recreation+play+fun+leisure+indoors+focus+competition" target="_blank"> SnappyGoat.com</a></p>
+            </div>
+        </div>
+        <button onClick="show()" id="showmore">Show personal experience</button>
         <script>
             let images = ["https://upload.wikimedia.org/wikipedia/commons/5/5b/St.Andrews_Old_Course%2C_5th_Hole%2C_Hole_O%27Cross_out_%28geograph_5515132%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original", "https://upload.wikimedia.org/wikipedia/commons/1/1d/St_george%27s_park_July_2012_Hydrotherapy_Suite.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"]
             let current = 0
@@ -69,16 +92,16 @@
                 if (current > 1){
                     current = 0
                 }
-                document.getElementById("saintGeorge").src = images[current]
+                document.getElementById("st.George").src = images[current]
             }
             function show(){
-                let element=document.getElementById("flex-wrapper")
+                let element=document.getElementById("hidden")
                 if (element.style.display=="flex"){
                     element.style.display="none"
-                    document.getElementById("showmore").innerHTML="Show More"
+                    document.getElementById("showmore").innerHTML="Show personal experience"
                 }else{
                     element.style.display="flex"
-                    document.getElementById("showmore").innerHTML="Show less"
+                    document.getElementById("showmore").innerHTML="Don't show"
                 }
             }
         </script>
